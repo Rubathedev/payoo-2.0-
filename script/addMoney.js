@@ -2,22 +2,27 @@ document.getElementById('add-money')
    .addEventListener('click', function(event) {
        event.preventDefault(); // ✅ Fix: Properly prevent form submission
 
-       const amount = document.getElementById('amount').value; // ✅ Fix: Trim spaces
-       const convertAmount = parseFloat(amount); 
+       const amount = getInputValueById ("amount"); // ✅ Fix: Trim spaces
+      
 
-       const pin = document.getElementById('Acount-pin').value; // ✅ Fix: Trim spaces
-       const converPin = parseInt(pin); // ✅ Fix: Ensure proper parsing as base-10 integer
+       const pin = getInputValueById("Acount-pin"); // ✅ Fix: Trim spaces
+       
 
-       const mainBalance = document.getElementById('main-balance').innerText;
-       const convertBalance = parseFloat(mainBalance); 
+       //const mainBalance = document.getElementById('main-balance').innerText;
+       //const convertBalance = parseFloat(mainBalance); 
 
-       console.log("Entered PIN:", converPin); // Debugging log
-
-       if (converPin === 1234) { 
-           console.log("Correct PIN! Adding money...");
-           const total = convertBalance + convertAmount;
-           document.getElementById('main-balance').innerText = total;
-       } else {
-           console.log("Pin is incorrect");
-       }
+       //console.log("Entered PIN:", converPin);// // Debugging log
+       const account = document.getElementById("Acount-Number").value;
+       const mainBalance = getInnerTextById("main-balance");
+       console.log(mainBalance);
+    //   if(account.lenght === 11){
+    //     if(pin===1234){
+    //         alert("yes");
+    //         console.log("it working")   
+    //     }
+    //     else{
+    //         alert("your pin is wrong,Try again ");
+    //          console.log("pin thik nai");
+    //     }
+    //   }
    });
