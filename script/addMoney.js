@@ -13,16 +13,20 @@ document.getElementById('add-money')
 
        //console.log("Entered PIN:", converPin);// // Debugging log
        const account = document.getElementById("Acount-Number").value;
+       console.log(account);
        const mainBalance = getInnerTextById("main-balance");
        console.log(mainBalance);
-    //   if(account.lenght === 11){
-    //     if(pin===1234){
-    //         alert("yes");
-    //         console.log("it working")   
-    //     }
-    //     else{
-    //         alert("your pin is wrong,Try again ");
-    //          console.log("pin thik nai");
-    //     }
-    //   }
+      if(account.length === 11){
+        if(pin===1234){
+            const sum = mainBalance + amount;
+            // document.getElementById("main-balance") = sum;
+            // console.log(sum);
+          setInnerTextByIDandValue("main-balance",sum);
+          console.log("main-balance",sum);
+        }
+        else{
+            alert("your pin is wrong,Try again ");
+             console.log("pin thik nai");
+        }
+      }
    });
