@@ -54,7 +54,7 @@
                 <img class="w-8 mx-auto" src="./assets/send1.png" alt="send1">
                 <h3 class="text-sm">Send Money</h3>
               </div>
-              <div  id="transactions-box" class="box border p-4 rounded-md shadow-md">  <!-- box 5 -->
+              <div  id="transaction-box" class="box border p-4 rounded-md shadow-md">  <!-- box 5 -->
                 <img class="w-8 mx-auto" src="./assets/money1.png" alt="wallet1">
                 <h3>Transactions</h3>
               </div>
@@ -73,11 +73,11 @@
                         <form class="card-body">
                           <fieldset class="fieldset font-bold">
                             <legend class="text-lg text-gray-500">Select A Bank</legend>
-                            <select class="select">
+                            <select id="select" class="select">
                                 <option disabled selected>Select your Bank</option>
                                 <option value="Bkash">Bkash</option>
                                 <option value="Nagad">Nagad</option>
-                                <option value="ddbl">DDBL</option>
+                                <option value="DDBL">DDBL</option>
                               </select>
                             <label class="fieldset-label text-lg">Bank Account Number</label>
                             <input   id="Acount-Number" type="number" class="input" placeholder="Put your Account Number" required />
@@ -111,7 +111,7 @@
                             <label class="fieldset-label text-lg">Amount </label>
                             <input  id="Amount"  type="number" class="input" placeholder="Put your amount " required />
                             <label class="fieldset-label text-lg ">Pin Number</label>
-                            <input   id="Acount-pin" type="number" class="input" placeholder="Enter 4 digit pin number" required />
+                            <input   id="acount-pin" type="number" class="input" placeholder="Enter 4 digit pin number" required />
                             <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-700 border-none">Withdraw Money</button>
                           </fieldset>
                         </form>
@@ -120,12 +120,19 @@
                   </div>
         
       </section>
-      
+      <!-- transaction -->
+      <section id="transaction" class="font-family" >
+            <h2 class="text-2xl font-bold text-red-400 text-center mt-8" >Transactions</h2>
+            <div id="transection-container">
+
+            </div>
+      </section>
 
     </section>
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/utilities.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transction-history.js"></script>
 </body>
 </html>
